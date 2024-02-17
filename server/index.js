@@ -17,8 +17,13 @@ const cors = require('cors');       // cors is used since some time hosting site
 require("./connect");       // imports the "connect.js" file and then connects database(mongodb) with nodejs server
 
 
-app.use(cors());
 app.use(express.json());        // transports the data from frontend to backend in JSON format
+const corsOptions = {
+      origin: '*',
+      credentials: true,
+      optionSuccessStatus: 200
+}
+app.use(cors(corsOptions))
 
 
 app.post("/login", (req,res)=> {
