@@ -13,12 +13,12 @@ const port = process.env.PORT || 3001;
 const EmployeeModel = require("./models/Employee");
 
 const cors = require('cors');       // cors is used since some time hosting site may reject so requests to the server to prevent that this is used
+app.use(cors());
 
 require("./connect");       // imports the "connect.js" file and then connects database(mongodb) with nodejs server
 
 
 app.use(express.json());        // transports the data from frontend to backend in JSON format
-app.use(cors());
 
 
 app.post("/login", (req,res)=> {
