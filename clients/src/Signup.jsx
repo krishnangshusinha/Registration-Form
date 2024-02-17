@@ -15,7 +15,7 @@ const Signup = () => {
         event.preventDefault();     // preventing default submit
 
         // posting the data( name, email ,password) to the backend
-        axios.post('http://localhost:3001/register', {name,email,password})      // send/posts data to this url    
+        axios.post('https://registration-form-5dyq.onrender.com/register', {name,email,password})      // send/posts data to this url    
         .then(result => {
             console.log(result);
             navigate("/login");   // this redirects to the login page when a user successfully registers
