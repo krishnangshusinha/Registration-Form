@@ -13,7 +13,7 @@ const Login = () => {
             event.preventDefault();     // preventing default submit
     
             // posting the data( name, email ,password) to the backend
-            axios.post('http://localhost:3001/login', {email,password})      // send/posts data to this url    
+            axios.post('https://registration-form-5dyq.onrender.com/login', {email,password})      // send/posts data to this url    
             .then(result => {
                 console.log(result);
                 if( result.data === "Success" ){
